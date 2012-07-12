@@ -1,0 +1,14 @@
+@mixin font-face($family, $filename)  {
+  $prefix: "/assets/" + $family + "/" + $filename;
+  // IE hack
+  @font-face {
+    font-family: $family;
+    src: url($prefix + ".eot?") format("embedded-opentype");
+  }
+
+  // Everybody else
+  @font-face {
+    font-family: $family;
+    src: local("☺"), url($prefix + ".woff") format("woff"), url($prefix + ".ttf") format("opentype"), url($prefix + ".eot"), url($prefix + ".svg#" + $filename + "'") format("svg");
+  }
+}

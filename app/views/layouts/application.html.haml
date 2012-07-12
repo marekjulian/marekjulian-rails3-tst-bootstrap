@@ -1,0 +1,39 @@
+!!!
+%html
+  %head
+    %title
+      = "Marek Julian"
+    %meta{:charset => "utf-8"}
+    = stylesheet_link_tag "application", :media => "all"
+    = csrf_meta_tags
+
+  %body
+    %header
+
+    / Flash notices
+    - if flash[:notice]
+      %div.flash-notice
+        = flash[:notice]
+
+    %section.container
+      %div#content
+        / Yield content
+        = yield
+
+    %footer#footer
+      %div#footer-contents
+
+    / Javascript goes at the bottom
+    = javascript_include_tag "application"
+    = yield :view_specific_js
+
+    /
+      Commit revision: #{git_revision}
+      Commit id: #{git_id}
+      Commit message: #{git_message}
+      Commit author: #{git_author}
+      Commit timestamp: #{git_timestamp}
+      Server ip: #{server_ip}
+      Hostname: #{server_name}
+      Mode: #{ENV["RAILS_ENV"]}
+      Generated at: #{Time.now}
