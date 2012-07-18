@@ -18,6 +18,7 @@ end
 
 gem 'jquery-rails', '2.0.0'
 gem "haml-rails"
+gem "grit"
 
 group :development, :test do
   gem 'rspec-rails', '2.10.0'

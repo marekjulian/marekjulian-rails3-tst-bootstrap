@@ -8,20 +8,31 @@
     = csrf_meta_tags
 
   %body
-    %header
+    %header.container-fluid
+      %div.header-content.row-fluid.span12
+        %div#header-logo
+          %span.logo-paren
+            )
+          %span.logo-j J
+          %span.logo-m M
+          %span.logo-paren
+            (
 
     / Flash notices
     - if flash[:notice]
       %div.flash-notice
         = flash[:notice]
 
-    %section.container
-      %div#content
+    %section.container-fluid
+      %div#content.row-fluid.span12
         / Yield content
         = yield
 
     %footer#footer
-      %div#footer-contents
+      %div#footer-container.container-fluid
+        %div#footer-contents.row-fluid.span12
+          %span.footer-name-first marek julian
+          %span.footer-name-last ryniejski
 
     / Javascript goes at the bottom
     = javascript_include_tag "application"
@@ -37,3 +48,4 @@
       Hostname: #{server_name}
       Mode: #{ENV["RAILS_ENV"]}
       Generated at: #{Time.now}
+ 

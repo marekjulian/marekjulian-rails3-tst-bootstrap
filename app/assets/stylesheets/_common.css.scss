@@ -1,7 +1,32 @@
 //
-//  Color Palette
+// Color Palette
 //
-$nav-gray: #747679;
+
+//
+// Basic colors:
+//
+$marekjulian-magenta: #de3dbf;
+$marekjulian-gray: #555555;
+$marekjulian-light-gray: #777777;
+
+//
+// Site colors:
+//
+$dark-background: #000000;
 $dark-gray-background: #2a2a2a;
+$nav-gray: $marekjulian-light-gray;
+$row-border-color: $marekjulian-light-gray;
+$header-text-color: $marekjulian-light-gray;
+$footer-bg-color: $dark-background;
+$footer-border-color: $row-border-color;
+$footer-text-color: $marekjulian-light-gray;
 
+//
+// Site dimensions:
+//
 
+$page-margin-x: 30px;
+$page-margin-y: 50px;
+$header-margin-top: 50px;
+$header-margin-bottom: 50px;
+$footer-height: 75px;

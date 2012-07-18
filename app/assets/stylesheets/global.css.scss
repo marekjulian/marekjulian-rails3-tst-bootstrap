@@ -8,3 +8,92 @@
 @include font-face("din", "din-webfont");
 
 @import "_common";
+@import "bootstrap";
+
+/*
+ * Tell the browser to render HTML 5 elements as block.
+ */
+header, footer, aside, nav, article, section {
+  display: block;
+}
+
+/*
+ * For the sticky footer.
+ */
+html, body {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  height: 100%;
+}
+
+body {
+  background: $dark-background;
+
+  header {
+    display: block;
+    margin: $header-margin-top $page-margin-x $header-margin-bottom $page-margin-x;
+    color: $header-text-color;
+    font-size: 4em;
+
+    div.header-content {
+      margin-left: 0px;
+
+      span {
+        float: right;
+      }
+      span.logo-m {
+        color: $marekjulian-magenta;
+      }
+      span.logo-j {
+        color: $marekjulian-gray;
+      }
+    }
+  }
+
+  section {
+    display: block;
+    margin: $page-margin-y $page-margin-x $page-margin-y $page-margin-x;
+
+    #content {
+      margin-left: 0px;
+    }
+  }
+
+  footer#footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    height: $footer-height;
+    width: 100%;
+    z-index: 50;
+    background-color: $footer-bg-color;
+    color: $footer-text-color;
+
+    div#footer-container {
+      display: block;
+      margin: 0 $page-margin-x 0 $page-margin-x;
+
+      div#footer-contents {
+        margin: 0px 0px 0px 0px;
+        border-top: 2px;
+        border-top-style: solid;
+        border-top-color: $footer-border-color;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 2em;
+
+        span.footer-name-first {
+          color: $marekjulian-magenta;
+        }
+        span.footer-name-last {
+          color: $marekjulian-gray;
+        }
+      }
+    }
+  }
+}
