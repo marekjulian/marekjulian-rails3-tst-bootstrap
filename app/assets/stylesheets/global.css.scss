@@ -32,28 +32,51 @@ body {
 
   header {
     display: block;
-    margin: $header-margin-top $page-margin-x $header-margin-bottom $page-margin-x;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    width: 100%;
+    height: $header-height;
+    z-index: 50;
+    background-color: $header-bg-color;
     color: $header-text-color;
-    font-size: 4em;
 
-    div.header-content {
-      margin-left: 0px;
+    div#header-container {
+      display: block;
+      margin: 0 $page-margin-x 0 $page-margin-x;
+      height: $header-height;
 
-      span {
-        float: right;
-      }
-      span.logo-m {
-        color: $marekjulian-magenta;
-      }
-      span.logo-j {
-        color: $marekjulian-gray;
+      div#header-content {
+        margin: 0px;
+        border-bottom: 2px;
+        border-bottom-style: solid;
+        border-bottom-color: $header-border-color;
+        padding: $header-content-padding-top 0px $header-content-padding-bottom 0px;
+	height: $header-content-height;
+	line-height: $header-content-height;
+
+        span {
+	  display: inline-block;
+          float: right;
+	  vertical-align: middle;
+          font-size: $header-font-size;
+        }
+        span.logo-m {
+          color: $marekjulian-magenta;
+        }
+        span.logo-j {
+          color: $marekjulian-gray;
+        }
       }
     }
   }
 
   section {
     display: block;
-    margin: $page-margin-y $page-margin-x $page-margin-y $page-margin-x;
+    margin: $section-margin-top $page-margin-x $page-margin-y $page-margin-x;
 
     #content {
       margin-left: 0px;
@@ -68,8 +91,8 @@ body {
     margin: 0px;
     border: 0px;
     padding: 0px;
-    height: $footer-height;
     width: 100%;
+    height: $footer-height;
     z-index: 50;
     background-color: $footer-bg-color;
     color: $footer-text-color;
@@ -78,7 +101,7 @@ body {
       display: block;
       margin: 0 $page-margin-x 0 $page-margin-x;
 
-      div#footer-contents {
+      div#footer-content {
         margin: 0px 0px 0px 0px;
         border-top: 2px;
         border-top-style: solid;

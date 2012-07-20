@@ -16,6 +16,8 @@ $dark-background: #000000;
 $dark-gray-background: #2a2a2a;
 $nav-gray: $marekjulian-light-gray;
 $row-border-color: $marekjulian-light-gray;
+$header-bg-color: $dark-background;
+$header-border-color: $row-border-color;
 $header-text-color: $marekjulian-light-gray;
 $footer-bg-color: $dark-background;
 $footer-border-color: $row-border-color;
@@ -24,9 +26,12 @@ $footer-text-color: $marekjulian-light-gray;
 //
 // Site dimensions:
 //
-
 $page-margin-x: 30px;
-$page-margin-y: 50px;
-$header-margin-top: 50px;
-$header-margin-bottom: 50px;
+$page-margin-y: 1em;
+$header-content-padding-top: 1em;
+$header-content-padding-bottom: 1em;
+$header-font-size: 3em;
+$header-content-height: $header-font-size;
+$header-height: $header-content-height + $header-content-padding-top + $header-content-padding-bottom;
+$section-margin-top: $header-height + $page-margin-y;
 $footer-height: 75px;
