@@ -2,73 +2,83 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#content .section-link-wrapper {
-  margin: 0px;
-  border: 0px;
-  padding: 0 0 0 0;
-  width: 1100px;
-  height: 100px;
-}
+#content {
+  .section-link-wrapper {
+    margin: 0px;
+    border: 0px;
+    padding: 0 0 0 0;
 
-.section-preview-link {
-  display: block;
-  position: static;
-  margin: 0px;
-  border: 0px;
-  padding: 0px;
-  width: 1100px;
-  height: 100px;
-}
+    div.outer-center {
+      float: left;
+      position: relative;
+      left: 50%;
 
-#do-i-know-you {
-  background: url("/assets/marekjulian_home_sprite-0.jpg") no-repeat -50px 0px;
-}
+      div.inner-center {
+        float: left;
+        position: relative;
+        left: -50%;
+      }
+    }
 
-#do-i-know-you:hover {
-  background: url("/assets/marekjulian_home_sprite-bright-1.jpg") no-repeat -50px 0px;
-}
+    .clear-both {
+      clear: both;
+    }
 
-#portrait-of-a-band {
-  background: url("/assets/marekjulian_home_sprite-0.jpg") no-repeat -50px -100px;
-}
+    .section-preview-link {
+      display: block;
+      position: static;
+      margin: 0px;
+      border: 0px;
+      padding: 0px;
+      width: 1100px;
+      height: 100px;
+    }
 
-#portrait-of-a-band:hover {
-  background: url("/assets/marekjulian_home_sprite-bright-1.jpg") no-repeat -50px -100px;
-}
+    #do-i-know-you {
+      background: url("/assets/marekjulian_home_sprite-0.jpg") no-repeat -50px 0px;
+    }
+    #do-i-know-you:hover {
+      background: url("/assets/marekjulian_home_sprite-bright-1.jpg") no-repeat -50px 0px;
+    }
 
-#you-are-so-beautiful {
-  background: url("/assets/marekjulian_home_sprite-0.jpg") no-repeat -50px -200px;
-}
+    #portrait-of-a-band {
+      background: url("/assets/marekjulian_home_sprite-0.jpg") no-repeat -50px -100px;
+    }
+    #portrait-of-a-band:hover {
+      background: url("/assets/marekjulian_home_sprite-bright-1.jpg") no-repeat -50px -100px;
+    }
 
-#you-are-so-beautiful:hover {
-  background: url("/assets/marekjulian_home_sprite-bright-1.jpg") no-repeat -50px -200px;
-}
+    #you-are-so-beautiful {
+      background: url("/assets/marekjulian_home_sprite-0.jpg") no-repeat -50px -200px;
+    }
+    #you-are-so-beautiful:hover {
+      background: url("/assets/marekjulian_home_sprite-bright-1.jpg") no-repeat -50px -200px;
+    }
 
-#cog-in-the-machine {
-  background: url("/assets/marekjulian_home_sprite-0.jpg") no-repeat -50px -300px;
-}
+    #cog-in-the-machine {
+      background: url("/assets/marekjulian_home_sprite-0.jpg") no-repeat -50px -300px;
+    }
+    #cog-in-the-machine:hover {
+      background: url("/assets/marekjulian_home_sprite-bright-1.jpg") no-repeat -50px -300px;
+    }
 
-#cog-in-the-machine:hover {
-  background: url("/assets/marekjulian_home_sprite-bright-1.jpg") no-repeat -50px -300px;
-}
+    #we-all-love-the-beach {
+      background: url("/assets/marekjulian_home_sprite-0.jpg") no-repeat -50px -400px;
+    }
+    #we-all-love-the-beach:hover {
+      background: url("/assets/marekjulian_home_sprite-bright-1.jpg") no-repeat -50px -400px;
+    }
 
-#we-all-love-the-beach {
-  background: url("/assets/marekjulian_home_sprite-0.jpg") no-repeat -50px -400px;
-}
+    #where-these-people-goin {
+      background: url("/assets/marekjulian_home_sprite-0.jpg") no-repeat -50px -500px;
+    }
+    #where-these-people-goin:hover {
+      background: url("/assets/marekjulian_home_sprite-bright-1.jpg") no-repeat -50px -500px;
+    }
 
-#we-all-love-the-beach:hover {
-  background: url("/assets/marekjulian_home_sprite-bright-1.jpg") no-repeat -50px -400px;
-}
+    #see-it-all {
+      background: url("/assets/marekjulian_home_sprite-0.jpg") no-repeat -50px -600px;
+    }
 
-#where-these-people-goin {
-  background: url("/assets/marekjulian_home_sprite-0.jpg") no-repeat -50px -500px;
+  }
 }
-
-#where-these-people-goin:hover {
-  background: url("/assets/marekjulian_home_sprite-bright-1.jpg") no-repeat -50px -500px;
-}
-
-#see-it-all {
-  background: url("/assets/marekjulian_home_sprite-0.jpg") no-repeat -50px -600px;
-}
-
