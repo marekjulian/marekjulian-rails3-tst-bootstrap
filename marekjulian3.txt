@@ -1,0 +1,19 @@
+Commands:
+
+  * Static Pages:
+
+    rails generate controller StaticPages home --no-test-framework.txt
+
+  * Authentication:
+
+    Add gem 'devise' to GemFile
+    bundle install
+    rails generate devise:install
+    rails generate devise User
+
+      * Note of postgres is not running: 
+
+        sudo -u postgres /Library/PostgreSQL/9.1/bin/pg_ctl -D /Library/PostgreSQL/9.1/data start
+
+    bundle exec rake db:migrate
+

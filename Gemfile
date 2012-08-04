@@ -17,8 +17,9 @@ group :assets do
 end
 
 gem 'jquery-rails', '2.0.0'
-gem "haml-rails"
-gem "grit"
+gem 'haml-rails'
+gem 'grit'
+gem 'devise'
 
 group :development, :test do
   gem 'rspec-rails', '2.10.0'
