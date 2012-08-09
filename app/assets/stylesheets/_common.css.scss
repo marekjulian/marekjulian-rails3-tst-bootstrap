@@ -22,6 +22,14 @@ $header-text-color: $marekjulian-light-gray;
 $footer-bg-color: $dark-background;
 $footer-border-color: $row-border-color;
 $footer-text-color: $marekjulian-light-gray;
+$link-color: $marekjulian-light-gray;
+$link-hover-color: $marekjulian-magenta;
+
+//
+// Font sizes
+//
+$header-font-size: 3em;
+$header-auth-font-size: 1.25em;
 
 //
 // Site dimensions:
@@ -30,7 +38,6 @@ $page-margin-x: 30px;
 $page-margin-y: 1em;
 $header-content-padding-top: 1em;
 $header-content-padding-bottom: 1em;
-$header-font-size: 3em;
 $header-content-height: $header-font-size;
 $header-height: $header-content-height + $header-content-padding-top + $header-content-padding-bottom;
 $section-margin-top: $header-height + $page-margin-y;

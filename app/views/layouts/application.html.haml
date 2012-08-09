@@ -11,12 +11,22 @@
     %header
       %div#header-container.container-fluid
         %div#header-content.row-fluid.span12
-          %span.logo-paren
-            )
-          %span.logo-j J
-          %span.logo-m M
-          %span.logo-paren
-            (
+          %div#header-logo
+            %span.logo-paren
+              (
+            %span.logo-m M
+            %span.logo-j J
+            %span.logo-paren
+              )
+          %div#header-auth
+            - if user_signed_in?
+              %span= "Hi #{current_user.firstname}"
+              %span
+                = link_to "sign out", destroy_user_session_path, :method => :delete
+            - else
+              %span friends, clients or curious:
+              %span
+                = link_to "sign in", new_user_session_path
 
     / Flash notices
     - if flash[:notice]

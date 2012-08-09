@@ -25,6 +25,16 @@ html, body {
   border: 0px;
   padding: 0px;
   height: 100%;
+
+  a {
+    color: $link-color;
+  }
+
+  a:hover {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+
 }
 
 body {
@@ -59,17 +69,28 @@ body {
 	line-height: $header-content-height;
 
         span {
-	  display: inline-block;
-          float: right;
+          display: inline-block;
 	  vertical-align: middle;
+        }
+
+        div#header-logo {
+          float: left;
           font-size: $header-font-size;
+
+          span.logo-m {
+            color: $marekjulian-magenta;
+          }
+          span.logo-j {
+            color: $marekjulian-magenta;
+          }
         }
-        span.logo-m {
-          color: $marekjulian-magenta;
-        }
-        span.logo-j {
+
+        div#header-auth {
+          float: right;
+          font-size: $header-auth-font-size;
           color: $marekjulian-gray;
         }
+
       }
     }
   }
