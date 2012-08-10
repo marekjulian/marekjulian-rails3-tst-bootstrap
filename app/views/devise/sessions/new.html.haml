@@ -1,0 +1,17 @@
+%div#sign-in-collection.auth-collection
+  %div.outer-center
+    %div.inner-center
+      %h1 Sign in
+
+      = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+        .inputs
+          = f.input :login, :required => true, :autofocus => true, :hint => 'username or email address'
+          = f.input :password, :required => true
+          - if devise_mapping.rememberable?
+            = f.input :remember_me, :as => :boolean, :required => false
+
+        .actions
+          = f.button :submit, 'Sign in'
+
+      #devise-shared-links
+        = render :partial => 'devise/shared/links'

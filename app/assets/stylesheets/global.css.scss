@@ -1,3 +1,5 @@
+//
+@import "_reset";
 @import "_mixins";
 
 // Fonts
@@ -25,6 +27,10 @@ html, body {
   border: 0px;
   padding: 0px;
   height: 100%;
+
+  div {
+    font-family: inherit;
+  }
 
   a {
     color: $link-color;
@@ -58,6 +64,7 @@ body {
       display: block;
       margin: 0 $page-margin-x 0 $page-margin-x;
       height: $header-height;
+      font-family: inherit;
 
       div#header-content {
         margin: 0px;
@@ -65,12 +72,14 @@ body {
         border-bottom-style: solid;
         border-bottom-color: $header-border-color;
         padding: $header-content-padding-top 0px $header-content-padding-bottom 0px;
-	height: $header-content-height;
-	line-height: $header-content-height;
+        height: $header-content-height;
+        line-height: $header-content-height;
+        font-family: inherit;
 
         span {
           display: inline-block;
-	  vertical-align: middle;
+          vertical-align: middle;
+          font-family: inherit;
         }
 
         div#header-logo {
@@ -89,6 +98,7 @@ body {
           float: right;
           font-size: $header-auth-font-size;
           color: $marekjulian-gray;
+          font-family: inherit;
         }
 
       }
@@ -101,6 +111,124 @@ body {
 
     #content {
       margin-left: 0px;
+      color: $content-text-color;
+
+      h1 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-family: 'helvetica-neue';
+        font-style: bold;
+        font-size: 3em;
+        font-weight: inherit;
+        color: $content-headings-color;
+      }
+
+      h2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-family: 'helvetica-neue';
+        font-style: bold;
+        font-size: 2em;
+        font-weight: inherit;
+        color: $content-headings-color;
+      }
+
+      .simple_form {
+        font-size: 1.5em;
+        line-height: 1em;
+
+        label {
+          float: left;
+          width: 100px;
+          text-align: right;
+          margin: 2px 10px;
+          color: $content-text-color;
+
+          abbr {
+            display: none;
+          }
+        }
+        div.input {
+          margin-bottom: 10px;
+        }
+        div.boolean, input[type='submit'] {
+          margin-left: 120px;
+        }
+        div.boolean label, label.collection_radio {
+          float: none;
+          margin: 0;
+        }
+        label.collection_radio {
+          margin-right: 10px;
+          margin-left: 2px;
+        }
+        .error {
+          clear: left;
+          margin-left: 120px;
+          font-size: 12px;
+          color: #dd0000;
+          display: block;
+        }
+        .hint {
+          clear: left;
+          margin-left: 120px;
+          font-size: 12px;
+          color: #555555;
+          display: block;
+          font-style: italic;
+        }
+        input.string, textarea.text, input.password {
+          border: 1px solid #b7b7b7;
+          background: #666666;
+          padding: 5px;
+          color: #b7ff00;
+          font-size: 12px;
+        }
+        input.string, input.password {
+          width: 300px;
+        }
+        textarea.text {
+          width: 600px;
+          height: 300px;
+        }
+        input:focus, textarea:focus, select:focus {
+          border: 1px solid $marekjulian-magenta;
+        }
+      }
+
+      .auth-collection {
+        padding-top: 40px;
+
+        div.outer-center {
+          float: left;
+          position: relative;
+          left: 50%;
+        }
+
+        div.inner-center {
+          float: left;
+          position: relative;
+          left: -60%;
+
+          #devise-shared-links {
+            padding-top: 20px;
+            padding-left: 40px;
+
+            a {
+              text-decoration: none;
+              color: gray;
+              font-size: 12px;
+            }
+          }
+        }
+
+        div.clear-both {
+          clear:both
+        }
+      }
+
     }
   }
 
@@ -136,6 +264,25 @@ body {
         }
         span.footer-name-last {
           color: $marekjulian-gray;
+        }
+        div.footer-link {
+          float: right;
+          padding: 0px 10px 0px 10px;
+
+          a {
+            font-size: 0.75em;
+            color: $marekjulian-gray;
+          }
+
+          a:hover {
+            color: $link-hover-color;
+            text-decoration: underline;
+          }
+        }
+        div.footer-link-next {
+          border-left:  1px;
+          border-left-style: solid;
+          border-left-color: $footer-border-color;
         }
       }
     }

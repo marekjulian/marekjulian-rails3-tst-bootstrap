@@ -8,6 +8,8 @@
 $marekjulian-magenta: #de3dbf;
 $marekjulian-gray: #555555;
 $marekjulian-light-gray: #777777;
+$text-gray: #707070;
+$light-gray: #9c9ea1;
 
 //
 // Site colors:
@@ -19,6 +21,8 @@ $row-border-color: $marekjulian-light-gray;
 $header-bg-color: $dark-background;
 $header-border-color: $row-border-color;
 $header-text-color: $marekjulian-light-gray;
+$content-text-color: $text-gray;
+$content-headings-color: $light-gray;
 $footer-bg-color: $dark-background;
 $footer-border-color: $row-border-color;
 $footer-text-color: $marekjulian-light-gray;
@@ -26,10 +30,16 @@ $link-color: $marekjulian-light-gray;
 $link-hover-color: $marekjulian-magenta;
 
 //
+// Fonts
+//
+$headings-font-family: 'helvetica-neue';
+
+//
 // Font sizes
 //
 $header-font-size: 3em;
 $header-auth-font-size: 1.25em;
+$form-label-font-size: 1.5em;
 
 //
 // Site dimensions:

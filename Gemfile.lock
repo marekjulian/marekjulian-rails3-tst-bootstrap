@@ -34,6 +34,7 @@ GEM
     bcrypt-ruby (3.0.1)
     bootstrap-sass (2.0.0)
     builder (3.0.0)
+    cancan (1.6.8)
     capybara (1.1.2)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -145,6 +146,9 @@ GEM
       libwebsocket (~> 0.1.3)
       multi_json (~> 1.0)
       rubyzip
+    simple_form (2.0.2)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
     sprockets (2.1.3)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -169,6 +173,7 @@ PLATFORMS
 DEPENDENCIES
   annotate (~> 2.4.1.beta)
   bootstrap-sass (= 2.0.0)
+  cancan
   capybara (= 1.1.2)
   coffee-rails (~> 3.2.1)
   devise
@@ -180,4 +185,5 @@ DEPENDENCIES
   rails (= 3.2.3)
   rspec-rails (= 2.10.0)
   sass-rails (~> 3.2.3)
+  simple_form
   uglifier (>= 1.0.3)

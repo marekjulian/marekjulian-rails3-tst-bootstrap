@@ -22,6 +22,10 @@ Commands:
             rails generate migration AddBasicDetailsToUsers username:string firstname:string lastname:string about:string
             bundle exec rake db:migrate
 
+        * Get our own copies of the views to customize:
+
+            rails generate devise:views
+
 Notes:
 
     * Authorization:
