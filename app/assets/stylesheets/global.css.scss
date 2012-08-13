@@ -257,20 +257,21 @@ body {
         border-top-color: $footer-border-color;
         padding-top: 10px;
         padding-bottom: 10px;
-        font-size: 2em;
 
         span.footer-name-first {
           color: $marekjulian-magenta;
+          font-size: 1.5em;
         }
         span.footer-name-last {
           color: $marekjulian-gray;
+          font-size: 1.5em;
         }
         div.footer-link {
           float: right;
           padding: 0px 10px 0px 10px;
 
           a {
-            font-size: 0.75em;
+            font-size: 1em;
             color: $marekjulian-gray;
           }
 

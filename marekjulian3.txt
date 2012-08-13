@@ -26,6 +26,12 @@ Commands:
 
             rails generate devise:views
 
+        * Create roles:
+
+            rails generate model Role name:string
+            rails generate migration users_roles user_id:integer role_id:integer
+            rake db:migrate
+
 Notes:
 
     * Authorization:

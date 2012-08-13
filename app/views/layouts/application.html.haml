@@ -44,15 +44,17 @@
           %span.footer-name-first marek julian
           %span.footer-name-last ryniejski
           %div.footer-link.footer-link-next
-            = link_to "500px", "http://www.500px.com/marekjulian"
-          %div.footer-link.footer-link-next
-            = link_to "flickr",
-            "http://www.flickr.com/photos/96689384@N00/"
-          %div.footer-link
             %a{ :href => "https://twitter.com/marekjulian", :class => "twitter-follow-button", 'data-show-count' => "false" }
               Follow @marekjulian
             %script
               !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs")
+          %div.footer-link.footer-link-next
+            = link_to "blog", "http://marekjulian.blogspot.com/"
+          %div.footer-link.footer-link-next
+            = link_to "500px", "http://www.500px.com/marekjulian"
+          %div.footer-link.footer-link
+            = link_to "flickr",
+            "http://www.flickr.com/photos/96689384@N00/"
 
     / Javascript goes at the bottom
     = javascript_include_tag "application"
