@@ -6,4 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #
-User.create(email: "marek@marekjulian.com", username: "marekjulian", firstname: "Marek Julian", lastname: "Ryniejski", password: "X", password_confirmation: "X")
+roles = Role.create!([ { :name => 'admin'},
+                       { :name => 'archive_owner'},
+                       { :name => 'archive_member'},
+                       { :name => 'visitor'}
+])
+User.create(email: "marek@marekjulian.com", username: "marekjulian", firstname: "Marek Julian", lastname: "Ryniejski", password: "", password_confirmation: "",
+            :roles => Role.where(:name => ['admin', 'archive_owner']))
