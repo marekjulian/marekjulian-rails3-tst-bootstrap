@@ -1,21 +1,22 @@
-
 # Image Storage
 
-Images will be stored on Flickr. Flickr images will be included in sets, and associated with an image variant.
-
-  Images have variants, and each variant can have one or more styles.
+Images are stored on Flickr. Flickr images will be included in sets, and 
+associated with an image variant. Images have variants, and each variant can
+have one or more styles available on Flickr.
 
 # Accessing Images
 
-  When images are linked, a Flickr URL will be generated for an image variant and a particular style. However, images can
-  also be referenced via URLs on the marekjulian.com domain. These will simply redirect to the appropriate Flickr URL.
+When links are generated for image variants, a Flickr URL will be generated for
+a particular style. However, images can also be referenced via URLs on the 
+marekjulian.com domain. These will simply redirect to the appropriate Flickr URL.
 
 ## marekjulain.com URLs
 
-Images can be referenced via the marekjulian.com domain.
+Images and image variants can be referenced via the marekjulian.com domain.
 
 ### images
 
+`
   /media-archives/<archive id>/images/<image id>[.<extension>][?<image params>]
 
     <extension> ::= <image mime type extension> || json
@@ -26,17 +27,18 @@ Images can be referenced via the marekjulian.com domain.
 
         <variant param> ::= variant=<variant selector>
 
-          <variant value> ::= master || web  || web_default || thumb || thum_default
+          <variant value> ::= master || web  || web_default || thumb || thumb_default
 
             Notes:
-              Values of master, web_default and thumbnail_default will return one and only one image.
-              Values of web and thumbnail can return a list of images when the <extension> is json.
+              Values of master, web_default and thumb_default will return one and only one image.
+              Values of web and thumb can return a list of images when the <extension> is json.
 
         <style param> ::= style=<style selector>
 
           <style selector> ::= original || web || thumb
 
   IE: /media-archives/1/images/1.jpg?variant=web
+`
 
 ### image variants
 
