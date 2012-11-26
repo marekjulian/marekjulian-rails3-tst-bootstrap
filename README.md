@@ -16,7 +16,8 @@ Images and image variants can be referenced via the marekjulian.com domain.
 
 ### images
 
-<pre>
+<pre><code>
+
   /media-archives/<archive id>/images/<image id>[.<extension>][?<image params>]
 
     <extension> ::= <image mime type extension> || json
@@ -38,7 +39,8 @@ Images and image variants can be referenced via the marekjulian.com domain.
           <style selector> ::= original || web || thumb
 
   IE: /media-archives/1/images/1.jpg?variant=web
-</pre>
+
+</code></pre>
 
 ### image variants
 
