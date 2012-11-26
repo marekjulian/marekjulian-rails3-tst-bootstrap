@@ -16,41 +16,35 @@ Images and image variants can be referenced via the marekjulian.com domain.
 
 ### images
 
-<pre><code>
+    /media-archives/<archive id>/images/<image id>[.<extension>][?<image params>]
 
-  /media-archives/<archive id>/images/<image id>[.<extension>][?<image params>]
+        <extension> ::= <image mime type extension> || json
 
-    <extension> ::= <image mime type extension> || json
+        <image params> :== <image param>+
 
-    <image params> :== <image param>+
+            <image param> ::= <variant param> || <style param>
 
-      <image param> ::= <variant param> || <style param>
+                <variant param> ::= variant=<variant selector>
 
-        <variant param> ::= variant=<variant selector>
+                    <variant value> ::= master || web  || web_default || thumb || thumb_default
 
-          <variant value> ::= master || web  || web_default || thumb || thumb_default
+                    Notes:
+                        Values of master, web_default and thumb_default will return one and only one image.
+                        Values of web and thumb can return a list of images when the <extension> is json.
 
-            Notes:
-              Values of master, web_default and thumb_default will return one and only one image.
-              Values of web and thumb can return a list of images when the <extension> is json.
+                <style param> ::= style=<style selector>
 
-        <style param> ::= style=<style selector>
+                    <style selector> ::= original || web || thumb
 
-          <style selector> ::= original || web || thumb
-
-  IE: /media-archives/1/images/1.jpg?variant=web
-
-</code></pre>
+    IE: /media-archives/1/images/1.jpg?variant=web
 
 ### image variants
 
-<pre>
     /media-archives/<archive id>/images/<image id>/image_variants/<image variant id>.<extension>[?<style param>]
 
         <extension> ::= <image mime type extension> || json
 
         <style param>: See images above.
-</pre>
 
 # Authentication, Authorization and Roles
 
