@@ -1,20 +1,7 @@
-# Authentication and Roles
-
-  * Authorization:
-    * Roles via cancan:
-      * admin
-        * do anything
-      * archive_owner
-        * do anything to an archive
-      * archive_member
-        * view anything in an archive
-      * visitor:
-        * view public portfolio
-        * view public user pages
 
 # Image Storage
 
-  Images will be stored on Flickr. Flickr images will be included in sets, and associated with an image variant.
+Images will be stored on Flickr. Flickr images will be included in sets, and associated with an image variant.
 
   Images have variants, and each variant can have one or more styles.
 
@@ -58,6 +45,38 @@ Images can be referenced via the marekjulian.com domain.
     <extension> ::= <image mime type extension> || json
 
     <style param>: See images above.
+
+# Authentication, Authorization and Roles
+
+## Roles via cancan:
+
+We use the cancan plugin to assign roles to users. The roles imply there are the following types of users: visitors, friends, archive_members, archive_owners, and admins. The roles are defined as follows:
+
+  * visitor:
+    * view portfolios
+  * 'friend' : Everything 'visitor' can do + see things shared with them by 'owner' or 'archive_member'.
+  * archive_member
+    * view anything in an archive
+    * share with friends
+  * archive_owner
+    * do anything to an archive
+  * admin
+    * do anything
+
+The above roles imply impose the following constraints on things:
+
+  * archive:
+    * view: 'archive_owner', 'archive_members'
+    * edit: 'archive_owner'
+    * delete: 'archive_owner'
+  * collections, images and image_variants:
+    * view: 'archive_owner', 'archive_members', and 'friends' shared with.
+    * edit: 'archive_owner'
+    * delete: 'archive_owner'
+  * portfolios:
+    * view: everyone
+    * edit: 'archive_owner'
+    * delete: 'archive_owner'
 
 # Commands Used During Development
 
