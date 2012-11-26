@@ -42,11 +42,13 @@ Images and image variants can be referenced via the marekjulian.com domain.
 
 ### image variants
 
+`
   /media-archives/<archive id>/images/<image id>/image_variants/<image variant id>.<extension>[?<style param>]
 
     <extension> ::= <image mime type extension> || json
 
     <style param>: See images above.
+`
 
 # Authentication, Authorization and Roles
 
